@@ -1,0 +1,73 @@
+version: 3
+domain: neurotech
+created_by: paulhb7
+seed_examples:
+  - context: |
+      To handle the scarcity and heterogeneity of electroencephalography (EEG) data for Brain-Computer Interface (BCI) tasks, and to harness the power of large publicly available datasets, we propose Neuro-GPT, a foundation model consisting of an EEG encoder and a GPT model. The foundation model is pre-trained on a large-scale dataset using a self-supervised task that learns how to reconstruct masked EEG segments.
+    questions_and_answers:
+      - question: What is Neuro-GPT?
+        answer: |
+          Neuro-GPT is a foundation model consisting of an EEG encoder and a GPT model, pre-trained on EEG datasets to handle data scarcity and heterogeneity for BCI tasks.
+      - question: What task does Neuro-GPT perform during pre-training?
+        answer: |
+          Neuro-GPT learns to reconstruct masked EEG segments as part of its self-supervised pre-training task.
+      - question: Why was Neuro-GPT developed?
+        answer: |
+          Neuro-GPT was developed to address data scarcity and heterogeneity in EEG datasets for BCI tasks by leveraging large-scale pre-training.
+  - context: |
+      The Neuro-GPT model includes an EEG encoder with convolutional and self-attention layers. The EEG encoder processes raw EEG signals by extracting spatio-temporal features. These features are represented as tokens, which are then passed to the GPT model. The GPT model applies causal masking to predict masked tokens in the EEG sequence.
+    questions_and_answers:
+      - question: How does Neuro-GPT process EEG data?
+        answer: |
+          Neuro-GPT processes EEG data using an EEG encoder with convolutional and self-attention layers to extract spatio-temporal features, which are passed as tokens to a GPT model.
+      - question: What is causal masking in Neuro-GPT?
+        answer: |
+          Causal masking involves masking specific EEG sequence tokens and predicting them based on prior tokens in the sequence.
+      - question: What role does the EEG encoder play in Neuro-GPT?
+        answer: |
+          The EEG encoder extracts meaningful spatio-temporal features from raw EEG signals for input into the GPT model.
+  - context: |
+      The pre-training of Neuro-GPT uses the Temple University Hospital (TUH) EEG dataset. The TUH dataset includes recordings from 14,987 subjects with various clinical EEG configurations. The recordings were preprocessed using bandpass filters, notch filters, and z-normalization, and re-sampled to 250 Hz.
+    questions_and_answers:
+      - question: What dataset is used to pre-train Neuro-GPT?
+        answer: |
+          Neuro-GPT is pre-trained on the Temple University Hospital (TUH) EEG dataset.
+      - question: How was the TUH EEG data preprocessed?
+        answer: |
+          TUH EEG data was preprocessed using bandpass filters, notch filters, z-normalization, and resampled to 250 Hz.
+      - question: How many subjects are included in the TUH EEG dataset?
+        answer: |
+          The TUH EEG dataset includes recordings from 14,987 subjects.
+  - context: |
+      The downstream task for Neuro-GPT involves fine-tuning on motor imagery classification. The BCI Competition IV Dataset 2a is used, where subjects perform four motor imagery tasks: imagining left hand, right hand, feet, and tongue movement. Three fine-tuning strategies are tested: encoder-only, encoder+GPT, and linear head fine-tuning.
+    questions_and_answers:
+      - question: What is the downstream task for Neuro-GPT?
+        answer: |
+          The downstream task is motor imagery classification using the BCI Competition IV Dataset 2a.
+      - question: What motor imagery tasks are included in the BCI 2a dataset?
+        answer: |
+          The tasks include imagining left hand, right hand, feet, and tongue movements.
+      - question: What are the three fine-tuning strategies tested for Neuro-GPT?
+        answer: |
+          The three strategies are encoder-only, encoder+GPT, and linear head fine-tuning.
+  - context: |
+      Neuro-GPT improves motor imagery classification performance compared to models trained from scratch. The encoder-only strategy achieved the highest accuracy, indicating that the EEG encoder successfully learned expressive and generalizable features during pre-training.
+    questions_and_answers:
+      - question: What strategy achieved the best performance for Neuro-GPT?
+        answer: |
+          The encoder-only strategy achieved the best performance for Neuro-GPT.
+      - question: How does Neuro-GPT compare to models trained from scratch?
+        answer: |
+          Neuro-GPT significantly improves motor imagery classification performance compared to models trained from scratch.
+      - question: What features does the EEG encoder learn during pre-training?
+        answer: |
+          The EEG encoder learns expressive and generalizable spatio-temporal features during pre-training.
+document_outline: |
+  Information about the BCI foundation model
+document:
+  repo: https://github.com/Paulhb7/instructlab_bci
+  commit: 
+  patterns:
+    - neurotech.md
+
+# Ensure there is a newline here at the end of the file
