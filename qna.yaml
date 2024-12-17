@@ -66,7 +66,7 @@ document_outline: |
   Information about the BCI foundation model
 document:
   repo: https://github.com/Paulhb7/instructlab_bci
-  commit: 
+  commit: 1308ff5f47547923fdfc532c626c16dc708b9dd2
   patterns:
     - neurotech.md
 
