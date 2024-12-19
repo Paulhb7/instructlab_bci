@@ -66,7 +66,7 @@ document_outline: |
   Information about the BCI foundation model, deep learning and BCI models
 document:
   repo: https://github.com/Paulhb7/instructlab_bci
-  commit: 1308ff5f47547923fdfc532c626c16dc708b9dd2
+  commit: f4d8feefb996f282cef01116a6733b1273e24b23
   patterns:
     - /Users/paulb/.local/share/instructlab/taxonomy/knowledge/technology/brain_computer_interfaces/neurotech.md
 
