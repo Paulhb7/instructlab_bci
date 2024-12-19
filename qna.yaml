@@ -3,7 +3,7 @@ domain: neurotech
 created_by: paulhb7
 seed_examples:
   - context: |
-      To handle the scarcity and heterogeneity of electroencephalography (EEG) data for Brain-Computer Interface (BCI) tasks, and to harness the power of large publicly available datasets, we propose Neuro-GPT, a foundation model consisting of an EEG encoder and a GPT model. The foundation model is pre-trained on a large-scale dataset using a self-supervised task that learns how to reconstruct masked EEG segments.
+      To handle the scarcity and heterogeneity of electroencephalography (EEG) data for Brain-Computer Interface (BCI) tasks, and to harness the power of large publicly available datasets, we propose a foundation model consisting of an EEG encoder and a GPT model. The foundation model is pre-trained on a large-scale dataset using a self-supervised task that learns how to reconstruct masked EEG segments.
     questions_and_answers:
       - question: What is Neuro-GPT?
         answer: |
@@ -15,7 +15,7 @@ seed_examples:
         answer: |
           Neuro-GPT was developed to address data scarcity and heterogeneity in EEG datasets for BCI tasks by leveraging large-scale pre-training.
   - context: |
-      The Neuro-GPT model includes an EEG encoder with convolutional and self-attention layers. The EEG encoder processes raw EEG signals by extracting spatio-temporal features. These features are represented as tokens, which are then passed to the GPT model. The GPT model applies causal masking to predict masked tokens in the EEG sequence.
+      The foundation model includes an EEG encoder with convolutional and self-attention layers. The EEG encoder processes raw EEG signals by extracting spatio-temporal features. These features are represented as tokens, which are then passed to the GPT model. The GPT model applies causal masking to predict masked tokens in the EEG sequence.
     questions_and_answers:
       - question: How does Neuro-GPT process EEG data?
         answer: |
@@ -39,35 +39,35 @@ seed_examples:
         answer: |
           The TUH EEG dataset includes recordings from 14,987 subjects.
   - context: |
-      The downstream task for Neuro-GPT involves fine-tuning on motor imagery classification. The BCI Competition IV Dataset 2a is used, where subjects perform four motor imagery tasks: imagining left hand, right hand, feet, and tongue movement. Three fine-tuning strategies are tested: encoder-only, encoder+GPT, and linear head fine-tuning.
+      The Brain Foundation Model (BFM) extends the principles of foundational models to brain data, including EEG and fMRI. It leverages transfer learning and probabilistic modeling to create robust representations of brain activity, generalizable across datasets and modalities.
     questions_and_answers:
-      - question: What is the downstream task for Neuro-GPT?
+      - question: What is the Brain Foundation Model (BFM)?
         answer: |
-          The downstream task is motor imagery classification using the BCI Competition IV Dataset 2a.
-      - question: What motor imagery tasks are included in the BCI 2a dataset?
+          The Brain Foundation Model (BFM) is a general-purpose framework that uses transfer learning and probabilistic modeling to analyze EEG and fMRI data for robust and scalable brain activity representations.
+      - question: How does BFM differ from Neuro-GPT?
         answer: |
-          The tasks include imagining left hand, right hand, feet, and tongue movements.
-      - question: What are the three fine-tuning strategies tested for Neuro-GPT?
+          While Neuro-GPT focuses on EEG data and self-supervised learning, BFM incorporates multiple modalities like fMRI and uses probabilistic modeling to handle time-series data.
+      - question: What datasets are used in BFM?
         answer: |
-          The three strategies are encoder-only, encoder+GPT, and linear head fine-tuning.
+          BFM uses datasets such as NMT-EEG and ABCD-fMRI to train and evaluate its performance across modalities.
   - context: |
-      Neuro-GPT improves motor imagery classification performance compared to models trained from scratch. The encoder-only strategy achieved the highest accuracy, indicating that the EEG encoder successfully learned expressive and generalizable features during pre-training.
+      The MOABB benchmark provides an open-source platform for evaluating EEG-based BCI pipelines. It highlights the superior performance of Riemannian geometry-based approaches and identifies best practices for reproducible benchmarking.
     questions_and_answers:
-      - question: What strategy achieved the best performance for Neuro-GPT?
+      - question: What is the purpose of the MOABB benchmark?
         answer: |
-          The encoder-only strategy achieved the best performance for Neuro-GPT.
-      - question: How does Neuro-GPT compare to models trained from scratch?
+          The MOABB benchmark standardizes the evaluation of EEG-based BCI pipelines, promoting reproducibility and providing insights into optimal methodologies.
+      - question: Why are Riemannian approaches preferred in MOABB benchmarks?
         answer: |
-          Neuro-GPT significantly improves motor imagery classification performance compared to models trained from scratch.
-      - question: What features does the EEG encoder learn during pre-training?
+          Riemannian approaches leverage covariance matrices' geometry, providing robust classification performance even with noisy or limited data.
+      - question: What are the key findings of the MOABB benchmark?
         answer: |
-          The EEG encoder learns expressive and generalizable spatio-temporal features during pre-training.
+          The MOABB benchmark highlights that Riemannian pipelines consistently outperform deep learning pipelines in terms of accuracy and computational efficiency.
 document_outline: |
-  Information about the BCI foundation model
+  Information about the BCI foundation model, deep learning and BCI models
 document:
   repo: https://github.com/Paulhb7/instructlab_bci
   commit: 1308ff5f47547923fdfc532c626c16dc708b9dd2
   patterns:
-    - neurotech.md
+    - /Users/paulb/.local/share/instructlab/taxonomy/knowledge/technology/brain_computer_interfaces/neurotech.md
 
 # Ensure there is a newline here at the end of the file
